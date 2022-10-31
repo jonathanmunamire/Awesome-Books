@@ -5,4 +5,4 @@ const currentTime = () => {
   timeHolder.innerHTML = DateTime.now().setZone('system').toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
 };
 
-export {currentTime}; 
+export default currentTime;

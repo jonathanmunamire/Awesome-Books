@@ -1,13 +1,12 @@
-import { Book } from "./modules/BookStorage.js";
-import { showBookPage,showFormPage,showContactPage } from "./modules/Navigation.js";
-import { currentTime } from "./modules/Date.js";
+import Book from './modules/BookStorage.js';
+import { showBookPage, showFormPage, showContactPage } from './modules/Navigation.js';
+import currentTime from './modules/Date.js';
 
 const bookList = document.getElementById('book-list');
 const newBookForm = document.getElementById('new-book-form');
 const inputTitle = document.getElementById('input-title');
 const inputAuthor = document.getElementById('input-author');
 const successSmall = document.getElementById('success-small');
-
 
 function storeBooksToStorage() {
   const booksString = JSON.stringify(Book.getAllBooksArray());
@@ -17,29 +16,6 @@ function storeBooksToStorage() {
 Book.setUpdater(storeBooksToStorage);
 
 Book.updateBooksArray(JSON.parse(window.localStorage.getItem('BookData')));
-
-
-function populateOriginalBookList(books) {
-  books.forEach((book) => {
-    const bItem = createBook(book);
-    bookList.append(bItem);
-  });
-}
-
-function displayOneBook(book) {
-  const bItem = createBook(book);
-  bookList.append(bItem);
-  
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-  const booksArray = Book.getAllBooksArray();
-  if (booksArray.length) {
-    populateOriginalBookList(booksArray);
-  }
-
-  
-});
 
 function createBook(book) {
   const mainTr = document.createElement('tr');
@@ -60,7 +36,24 @@ function createBook(book) {
   return mainTr;
 }
 
-export {createBook};
+function populateOriginalBookList(books) {
+  books.forEach((book) => {
+    const bItem = createBook(book);
+    bookList.append(bItem);
+  });
+}
+
+function displayOneBook(book) {
+  const bItem = createBook(book);
+  bookList.append(bItem);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const booksArray = Book.getAllBooksArray();
+  if (booksArray.length) {
+    populateOriginalBookList(booksArray);
+  }
+});
 
 newBookForm.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -91,6 +84,4 @@ window.addEventListener('hashchange', () => {
 
 setInterval(() => {
   currentTime();
-  }, 1000); 
-
-
+}, 1000);

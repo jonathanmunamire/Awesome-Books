@@ -20,4 +20,4 @@ function showContactPage() {
   bookPage.classList.add('hide');
 }
 
-export { showBookPage,showFormPage,showContactPage };
+export { showBookPage, showFormPage, showContactPage };
