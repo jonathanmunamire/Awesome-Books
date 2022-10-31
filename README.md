@@ -25,13 +25,13 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 	Clone this repository
-	git clone git@github.com:MosDevx/Awesome-Books.git
+	git clone https://github.com/jonathanmunamire/Awesome-Books.git
 
 ### Install
 	Open Html file in preferred browser
 
 ### Deployment
-  [Live Demo Link](https://mosdevx.github.io/Awesome-Books/)
+  [Live Demo Link](https://jonathanmunamire.github.io/Awesome-Books/)
 
 ## Authors
 
