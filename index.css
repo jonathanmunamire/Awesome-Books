@@ -110,13 +110,20 @@ h6 {
   flex-direction: column;
   align-items: center;
   font-family: "Poppins", sans-serif;
+  padding-top: 8%;
+}
+
+#date {
+  align-self: flex-end;
+  padding-right: 5%;
+  padding-bottom: 2%;
 }
 
 #book-page {
   width: 100%;
-  padding: 10% 1% 0% 1%;
+  padding: 0% 1% 0% 1%;
   align-items: center;
-  height: 100vh;
+  height: 75vh;
 }
 
 #book-page h1 {
@@ -148,10 +155,9 @@ h6 {
 
 #form-page {
   width: 100%;
-  padding-top: 10%;
   align-items: center;
   padding-left: 35%;
-  height: 100vh;
+  height: 75vh;
 }
 
 #form-page h1 {
@@ -193,8 +199,7 @@ h6 {
 
 #contact-page {
   width: 100%;
-  padding-top: 10%;
-  height: 100vh;
+  height: 75vh;
 }
 
 #contact-page h1 {
