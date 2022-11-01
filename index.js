@@ -17,7 +17,7 @@ Book.setUpdater(storeBooksToStorage);
 
 Book.updateBooksArray(JSON.parse(window.localStorage.getItem('BookData')));
 
-function createBook(book) {
+const createBook = (book) => {
   const mainTr = document.createElement('tr');
   const pTitle = document.createElement('td');
   const pAuthor = document.createElement('td');
@@ -36,14 +36,14 @@ function createBook(book) {
   return mainTr;
 }
 
-function populateOriginalBookList(books) {
+const populateOriginalBookList = (books) => {
   books.forEach((book) => {
     const bItem = createBook(book);
     bookList.append(bItem);
   });
 }
 
-function displayOneBook(book) {
+const displayOneBook = (book) => {
   const bItem = createBook(book);
   bookList.append(bItem);
 }
