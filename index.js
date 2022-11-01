@@ -34,19 +34,19 @@ const createBook = (book) => {
   tdButton.appendChild(button);
   mainTr.append(pTitle, pAuthor, tdButton);
   return mainTr;
-}
+};
 
 const populateOriginalBookList = (books) => {
   books.forEach((book) => {
     const bItem = createBook(book);
     bookList.append(bItem);
   });
-}
+};
 
 const displayOneBook = (book) => {
   const bItem = createBook(book);
   bookList.append(bItem);
-}
+};
 
 window.addEventListener('DOMContentLoaded', () => {
   const booksArray = Book.getAllBooksArray();
